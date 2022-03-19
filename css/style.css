@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+header {
+    font-size: 6vmin;
+    padding: 1vmin;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    letter-spacing: .6vmin;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#play {
+    font-size: 2vmin;
+    font-weight: bold;
+    padding: 2vmin;
+    margin-top: 4vmin;
+    border: .3vmin solid grey;
+    color: grey;
+    border-radius: 2vmin;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    justify-content: center;
+}
