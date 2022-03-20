@@ -3,19 +3,24 @@ body {
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
+    background-image: url('../bigfield.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 header {
     font-size: 6vmin;
+    font-family: 'Bungee';
     padding: 1vmin;
-    background-color: blue;
-    color: white;
+    color: rgb(14, 2, 2);
     text-align: center;
     letter-spacing: .6vmin;
 }
 
 main {
     display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -32,7 +37,32 @@ main {
     outline: none;
     cursor: pointer;
     position: absolute;
-    bottom: 0;
+    bottom: 313px;
     left: auto;
     justify-content: center;
 }
+
+#timer {
+    font-size: 3vmin;
+    font-family: 'Bungee';
+    padding: 2vmin;
+    margin-top: 4vmin;
+    position: absolute;
+    bottom: 0px;
+    padding-right: 32%;
+
+}
+
+#score {
+    font-size: 3vmin;
+    font-family: 'bungee';
+    padding: 2vmin;
+    margin-top: 4vmin;
+    position: absolute;
+    bottom: 0px;
+    padding-left: 32%;
+}
+
+
+
+
