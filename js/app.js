@@ -5,39 +5,42 @@
 
 //global variables
 const score = 0;
-const timer = 30;
 const winningScore = 10;
 const birds = document.querySelector('#clickable');
 const playBtn = document.querySelector('#play');
 const bottomEls = document.querySelector('#timer');
 const bottomEltwo = document.querySelector('#score');
 
+let intervalId;
 
 
 
 // Function that runs the timer////////
 function startTimer(duration, display) {
-    let timer = duration, seconds;
-    setInterval(function () {
+    display.innerText = duration;
+     intervalId = setInterval(function () {
+        duration--
+        display.innerText = duration;
+
+        if (duration === 0){
+            clearInterval(intervalId);
         
-        seconds = parseInt(timer % 2, 10);
-
-        
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = ":" + seconds;
-
-        if (--timer < 0) {
-            timer = 0; 
-            
         }
+       
+        
     }, 1000);
 }
 
 
+        
+            
+        
+
+
+
 
 playBtn.onclick = function () {
-    let fiveMinutes = 60 * 5,
+    let fiveMinutes = 20,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
 };
