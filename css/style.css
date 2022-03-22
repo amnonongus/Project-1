@@ -72,6 +72,7 @@ main {
     width: 100%;
     height: 100%;
     cursor: crosshair;
+    visibility: hidden;
 }
 
 #replay {

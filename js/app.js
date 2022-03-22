@@ -7,11 +7,17 @@
 const score = 0;
 const winningScore = 10;
 const birds = document.querySelector('#clickable');
+const clickBirds = Array.from(document.querySelectorAll('.bird'))
 const playBtn = document.querySelector('#play');
 const bottomEls = document.querySelector('#timer');
 const bottomEltwo = document.querySelector('#score');
 
 let intervalId;
+
+
+
+
+//LOSS CONDITION
 
 
 
@@ -24,12 +30,19 @@ function startTimer(duration, display) {
 
         if (duration === 0){
             clearInterval(intervalId);
-        
+            alert('GAME OVER');
         }
        
         
     }, 1000);
 }
+
+
+// clickBirds.onclick = function (e) {
+//     console.log(e.target);
+//     document.querySelector(`#${e.target.id}`).style.visibility = 'hidden';
+    
+// }
 
 
         
@@ -51,7 +64,10 @@ playBtn.onclick = function () {
 document.querySelector('#clickable').addEventListener('click', handleClick);
 
 function handleClick(e) {
-    console.log(e.target.tagName);
+    console.log(e.target.className);
+    if (e.target.className === 'bird'){
+        document.querySelector(`#${e.target.id}`).style.visibility = 'hidden';
+    }
 }
 
 
@@ -69,6 +85,7 @@ function init(e){
         bottomEls.style.visibility = 'visible';
         bottomEltwo.style.visibility = 'visible';
         playBtn.style.visibility = 'hidden';
+        birds.style.visibility = 'visible';
         
       
     }
