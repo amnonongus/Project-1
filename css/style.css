@@ -30,8 +30,8 @@ main {
     font-size: 8vmin;
     font-weight: bold;
     padding: 2vmin;
-    margin-top: 4vmin;
-    border: .3vmin solid navy;
+    margin-top: 4vmin;5
+    border: .3vmin white;
     background-color: navy;
     color: white;
     border-radius: 5vmin;
@@ -52,6 +52,7 @@ main {
     position: absolute;
     bottom: 0px;
     padding-right: 32%;
+    visibility: hidden;
 
 }
 
@@ -64,8 +65,68 @@ main {
     position: absolute;
     bottom: 0px;
     padding-left: 32%;
+    visibility: hidden;
+}
+
+#clickable {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+#replay {
+    font-size: 8vmin;
+    font-weight: bold;
+    padding: 2vmin;
+    margin-top: 4vmin;5
+    border: .3vmin white;
+    background-color: red;
+    color: white;
+    border-radius: 5vmin;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 335px;
+    left: auto;
+    justify-content: center;
+}
+
+#time {
+    color: white;
+    
+}
+
+#point {
+    color: white;
+
 }
 
 
+#bird1, #bird2, #bird3, #bird4, #bird5, #bird6, #bird7, #bird8, #bird9, #bird10 {
+    content: url('../bird.png');
+    width: 60px;
 
+}
 
+#tryAgain {
+    font-size: 8vmin;
+    font-weight: bold;
+    padding: 2vmin;
+    margin-top: 4vmin;5
+    border: .3vmin white;
+    background-color: red;
+    color: white;
+    border-radius: 5vmin;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 335px;
+    left: auto;
+    justify-content: center;
+    visibility: hidden;
+
+}
+
+#replayWin, #replayLose {
+    visibility: hidden;
+}

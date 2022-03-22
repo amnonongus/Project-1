@@ -8,18 +8,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/main.js"></script>
+    <script defer src="js/app.js"></script>
 </head>
 <body>
     <header>WHAQK-A-DUCK</header>
     <main>
 
-        <h1 id="play">PLAY</h1>
-        <h1 id="timer">Timer:</h1>
-        <h1 id="score">Points:</h1>
-        <section id="birds">
-            
-        </section>
+        <!-- <h1 id="play">PLAY</h1> -->
+        <h1 id="timer">Timer:<span id="time">20</span></h1>
+        <h1 id="score">Points:<span id="point">0</span></h1>
+        <button id="play">PLAY</button>
+        <div id="clickable">
+            <div class="bird" id="bird1"><h1>bird</h1></div>
+            <div class="bird" id="bird2"><h1>bird</h1></div>
+            <div class="bird" id="bird3"><h1>bird</h1></div>
+            <div class="bird" id="bird4"><h1>bird</h1></div>
+            <div class="bird" id="bird5"><h1>bird</h1></div>
+            <div class="bird" id="bird6"><h1>bird</h1></div>
+            <div class="bird" id="bird7"><h1>bird</h1></div>
+            <div class="bird" id="bird8"><h1>bird</h1></div>
+            <div class="bird" id="bird9"><h1>bird</h1></div>
+            <div class="bird" id="bird10"><h1>bird</h1></div>
+
+        </div>
+        <button id="tryAgain">Try Again</button>
+        <div id="replayWin">You lose</div>
+        <div id="replayLose">You win w0w so guud</div>
+        
     </main>
     
 </body>
