@@ -51,6 +51,7 @@ main {
     margin-top: 4vmin;
     position: absolute;
     bottom: 0px;
+    left: 850px;
     padding-right: 32%;
     visibility: hidden;
 
@@ -79,8 +80,8 @@ main {
     font-size: 8vmin;
     font-weight: bold;
     padding: 2vmin;
-    margin-top: 4vmin;5
-    border: .3vmin white;
+    margin-top: 4vmin
+    border: 3vmin white;
     background-color: red;
     color: white;
     border-radius: 5vmin;
@@ -105,9 +106,70 @@ main {
 
 #bird1, #bird2, #bird3, #bird4, #bird5, #bird6, #bird7, #bird8, #bird9, #bird10 {
     content: url('../bird.png');
-    width: 60px;
-
+    width: 85px;
 }
+
+#bird1 {
+    position: absolute;
+    top: 720px;
+    left: 492px;   
+}
+
+#bird2 {
+    position: absolute;
+    top: 149px;
+    left: 426px;   
+}
+
+#bird3 {
+    position: absolute;
+    top: 407px;
+    left: 298px;  
+}
+
+#bird4 {
+    position: absolute;
+    top: 350px;
+    left: 634px;   
+}
+
+#bird5 {
+    position: absolute;
+    top: 509px;
+    left: 885px;  
+}
+
+#bird6 {
+    position: absolute;
+    top: 411px;
+    left: 1101px; 
+}
+
+#bird7 {
+    position: absolute;
+    top: 542px;
+    left: 98px;  
+}
+
+#bird8 {
+    position: absolute;
+    top: 110px;
+    left: 1116px; 
+}
+
+#bird9 {
+    position: absolute;
+    top: 228px;
+    left: 221px; 
+}
+
+#bird10 {
+    position: absolute;
+    top: 414px;
+    left: 1500px; 
+}
+
+
 
 #tryAgain {
     font-size: 8vmin;
@@ -135,7 +197,7 @@ main {
     padding: 2vmin;
     margin-top: 4vmin;
     border: 3vmin white;
-    color: red;
+    color: navy;
     border-radius: 5vmin;
     outline: none;
     cursor: pointer;
@@ -146,3 +208,39 @@ main {
     visibility: hidden;
     
 }
+
+#winMessage {
+    font-size: 4vmin;
+    font-weight: bold;
+    font-family: 'bungee';
+    padding: 2vmin;
+    margin-top: 4vmin;
+    border: 3vmin white;
+    color: navy;
+    border-radius: 5vmin;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 590px;
+    left: auto;
+    justify-content: center;
+    visibility: hidden;
+    
+}
+
+#instructions {
+    font-size: 4vmin;
+    font-weight: bold;
+    font-family: 'bungee';
+    padding: 2vmin;
+    margin-top: 4vmin;
+    border: 3vmin white;
+    color: navy;
+    border-radius: 5vmin;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 590px;
+    left: auto;
+    justify-content: center;
+    

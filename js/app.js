@@ -5,7 +5,6 @@
 
 //global variables
 const score = document.querySelector('#point');
-const winningScore = 10;
 const birds = document.querySelector('#clickable');
 const clickBirds = Array.from(document.querySelectorAll('.bird'))
 const playBtn = document.querySelector('#play');
@@ -13,6 +12,8 @@ const bottomEls = document.querySelector('#timer');
 const bottomEltwo = document.querySelector('#score');
 const gameOver = document.querySelector('#tryAgain');
 const loseMessage = document.querySelector('#loseMessage');
+const winMessage = document.querySelector('#winMessage');
+const instruct = document.querySelector('#instructions');
 let intervalId;
 
 
@@ -48,15 +49,14 @@ function startTimer(duration, display) {
 // }
 
 
-        
             
         
 
 
 
 
-playBtn.onclick = function () {
-    let fiveMinutes = 3,
+function setTimer () {
+    let fiveMinutes = 5,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
 };
@@ -71,6 +71,7 @@ function handleClick(e) {
     if (e.target.className === 'bird'){
         document.querySelector(`#${e.target.id}`).style.visibility = 'hidden';
     }
+    checkWinner()
 }
 
 
@@ -84,33 +85,36 @@ function handleStart(e) {
 
 function init(e){
     console.log('working');
-    playBtn.onclick = function () {
         bottomEls.style.visibility = 'visible';
-        bottomEltwo.style.visibility = 'visible';
+        // bottomEltwo.style.visibility = 'visible';
         playBtn.style.visibility = 'hidden';
-        birds.style.visibility = 'visible';
-        
-      
-    }
+        clickBirds.forEach(bird => bird.style.visibility = 'visible');
+        loseMessage.style.visibility = 'hidden';
+        gameOver.style.visibility = 'hidden';
+        winMessage.style.visibility = 'hidden';
+        instruct.style.visibility = 'hidden';
+        setTimer()     
+    
 };
 
+function checkWinner (){
+    let hiddenBirds = 0
+    for (i = 0; i <= clickBirds.length - 1; i++){
+    if (clickBirds[i].style.visibility === 'hidden'){
+        hiddenBirds += 1 
+        console.log(hiddenBirds)
+    } if (hiddenBirds === clickBirds.length){
+        clearInterval(intervalId);
+        gameOver.style.visibility = 'visible';
+        winMessage.style.visibility = 'visible';
+
+  }
+ }
+}
 
 
+gameOver.addEventListener('click', init); 
 
-// function renderMessage(winner){
-//     if(bottomEltwo === 10){
-//         return 'Wow you r so guud'
-//     } else {
-//         return 'hOw Do yOu LooOoOoOosE!'
-//     }
-// }
-
-// function checkWinner (){
-//     if(score === 10){
-//         return true
-//     } else if (bottomEls === 0){
-//         return false
-//     }
 
 
 //PLAY button needs to start the game.
@@ -128,9 +132,4 @@ function init(e){
 //ELSE no 10 points before timer runs out...LOSE
 
 
-    
-
-
-
-
-
+//function that knows IF all the divs inside #clickable are clikced then you win 
