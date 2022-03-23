@@ -30,7 +30,7 @@ main {
     font-size: 8vmin;
     font-weight: bold;
     padding: 2vmin;
-    margin-top: 4vmin;5
+    margin-top: 4vmin;
     border: .3vmin white;
     background-color: navy;
     color: white;
@@ -128,6 +128,21 @@ main {
 
 }
 
-#replayWin, #replayLose {
+#loseMessage {
+    font-size: 4vmin;
+    font-weight: bold;
+    font-family: 'bungee';
+    padding: 2vmin;
+    margin-top: 4vmin;
+    border: 3vmin white;
+    color: red;
+    border-radius: 5vmin;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 590px;
+    left: auto;
+    justify-content: center;
     visibility: hidden;
+    
 }

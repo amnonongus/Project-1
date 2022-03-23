@@ -4,20 +4,21 @@
 //Play button to start the game. Reset the score and restart timer.
 
 //global variables
-const score = 0;
+const score = document.querySelector('#point');
 const winningScore = 10;
 const birds = document.querySelector('#clickable');
 const clickBirds = Array.from(document.querySelectorAll('.bird'))
 const playBtn = document.querySelector('#play');
 const bottomEls = document.querySelector('#timer');
 const bottomEltwo = document.querySelector('#score');
-
+const gameOver = document.querySelector('#tryAgain');
+const loseMessage = document.querySelector('#loseMessage');
 let intervalId;
 
 
 
 
-//LOSS CONDITION
+
 
 
 
@@ -30,7 +31,9 @@ function startTimer(duration, display) {
 
         if (duration === 0){
             clearInterval(intervalId);
-            alert('GAME OVER');
+            gameOver.style.visibility = 'visible';
+            loseMessage.style.visibility = 'visible';
+            
         }
        
         
@@ -53,7 +56,7 @@ function startTimer(duration, display) {
 
 
 playBtn.onclick = function () {
-    let fiveMinutes = 20,
+    let fiveMinutes = 3,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
 };
@@ -90,6 +93,9 @@ function init(e){
       
     }
 };
+
+
+
 
 // function renderMessage(winner){
 //     if(bottomEltwo === 10){
