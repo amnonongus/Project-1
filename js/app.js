@@ -21,6 +21,8 @@ const gameOver = document.querySelector('#tryAgain');
 const loseMessage = document.querySelector('#loseMessage');
 const winMessage = document.querySelector('#winMessage');
 const instruct = document.querySelector('#instructions');
+const quack = new Audio("../imgs/duck1.mp3");
+quack.volume = 0.01;
 let intervalId;
 
     
@@ -61,6 +63,7 @@ function handleClick(e) {
     console.log(e.target.className);
     if (e.target.className === 'bird'){
         document.querySelector(`#${e.target.id}`).style.visibility = 'hidden';
+        quack.play('quack');
     }
     checkWinner()
 }
