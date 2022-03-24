@@ -1,7 +1,5 @@
-// Make class 'Birds' as BUTTONS and have them appear 
-//and disappear from screen
-
-//Play button to start the game. Reset the score and restart timer.
+//Array of loss condition messages that will be randomized
+//when thee timer runs out.
 const lossMessages = [
     'lol how do you looooooose',
     'you realize this game is ez rite',
@@ -11,9 +9,6 @@ const lossMessages = [
     'My dad can do this and he\'s like 80.',
     '??????????',
 ];
-
-
-
 
 
 //global variables
@@ -32,13 +27,9 @@ let intervalId;
     
 
   
-        
 
-
-
-
-
-// Function that runs the timer////////
+//Start timer function, with loss conditions and a clear interval
+//attached.
 function startTimer(duration, display) {
     display.innerText = duration;
      intervalId = setInterval(function () {
@@ -53,25 +44,11 @@ function startTimer(duration, display) {
             loseMessage.innerHTML = lossMessages[Math.floor(Math.random() * lossMessages.length)]
             
         }
-       
-        
     }, 1000);
 }
 
 
-// clickBirds.onclick = function (e) {
-//     console.log(e.target);
-//     document.querySelector(`#${e.target.id}`).style.visibility = 'hidden';
-    
-// }
-
-
-            
-        
-
-
-
-
+//sets the timer value
 function setTimer () {
     let fiveMinutes = 5,
         display = document.querySelector('#time');
@@ -92,14 +69,16 @@ function handleClick(e) {
 }
 
 
+//This is the play button when screen is loaded
 playBtn.addEventListener('click', init);
-
 document.querySelector('#play').addEventListener('click', handleStart);
 
 function handleStart(e) {
     console.log(e.target.tagName);
 }
 
+
+//Initialize function that renders the original state of the game.
 function init(e){
     console.log('working');
         bottomEls.style.visibility = 'visible';
@@ -114,6 +93,7 @@ function init(e){
     
 };
 
+//function that checks to see if all birds have been clicked. If so, return win condition.
 function checkWinner (){
     let hiddenBirds = 0
     for (i = 0; i <= clickBirds.length - 1; i++){
@@ -130,7 +110,7 @@ function checkWinner (){
  }
 }
 
-
+// onclick for "play again" button, returning to game to init state.
 gameOver.addEventListener('click', init); 
 
 
