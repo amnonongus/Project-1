@@ -2,6 +2,19 @@
 //and disappear from screen
 
 //Play button to start the game. Reset the score and restart timer.
+const lossMessages = [
+    'lol how do you looooooose',
+    'you realize this game is ez rite',
+    '...bruh',
+    'this is awkward',
+    'ok maybe try another game',
+    'My dad can do this and he\'s like 80.',
+    '??????????',
+];
+
+
+
+
 
 //global variables
 const score = document.querySelector('#point');
@@ -16,8 +29,10 @@ const winMessage = document.querySelector('#winMessage');
 const instruct = document.querySelector('#instructions');
 let intervalId;
 
+    
 
-
+  
+        
 
 
 
@@ -34,6 +49,8 @@ function startTimer(duration, display) {
             clearInterval(intervalId);
             gameOver.style.visibility = 'visible';
             loseMessage.style.visibility = 'visible';
+            clickBirds.forEach(bird => bird.style.visibility = 'hidden');
+            loseMessage.innerHTML = lossMessages[Math.floor(Math.random() * lossMessages.length)]
             
         }
        
@@ -107,6 +124,7 @@ function checkWinner (){
         clearInterval(intervalId);
         gameOver.style.visibility = 'visible';
         winMessage.style.visibility = 'visible';
+        
 
   }
  }
