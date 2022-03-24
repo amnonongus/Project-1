@@ -54,7 +54,6 @@ main {
     left: 850px;
     padding-right: 32%;
     visibility: hidden;
-
 }
 
 #score {
@@ -95,14 +94,7 @@ main {
 
 #time {
     color: white;
-    
 }
-
-#point {
-    color: white;
-
-}
-
 
 #bird1, #bird2, #bird3, #bird4, #bird5, #bird6, #bird7, #bird8, #bird9, #bird10 {
     content: url('../imgs/bird.png');
@@ -169,8 +161,6 @@ main {
     left: 1500px; 
 }
 
-
-
 #tryAgain {
     font-size: 8vmin;
     font-weight: bold;
@@ -187,7 +177,6 @@ main {
     left: auto;
     justify-content: center;
     visibility: hidden;
-
 }
 
 #loseMessage {
@@ -206,7 +195,6 @@ main {
     left: auto;
     justify-content: center;
     visibility: hidden;
-    
 }
 
 #winMessage {
@@ -225,7 +213,6 @@ main {
     left: auto;
     justify-content: center;
     visibility: hidden;
-    
 }
 
 #instructions {
@@ -243,4 +230,5 @@ main {
     bottom: 590px;
     left: auto;
     justify-content: center;
+}
     

@@ -1,5 +1,5 @@
 //Array of loss condition messages that will be randomized
-//when thee timer runs out.
+//when the timer runs out.
 const lossMessages = [
     'lol how do you looooooose',
     'you realize this game is ez rite',
@@ -9,7 +9,6 @@ const lossMessages = [
     'My dad can do this and he\'s like 80.',
     '??????????',
 ];
-
 
 //global variables
 const score = document.querySelector('#point');
@@ -25,8 +24,6 @@ const instruct = document.querySelector('#instructions');
 let intervalId;
 
     
-
-  
 
 //Start timer function, with loss conditions and a clear interval
 //attached.
@@ -93,7 +90,8 @@ function init(e){
     
 };
 
-//function that checks to see if all birds have been clicked. If so, return win condition.
+//function that checks to see if all birds have been clicked. 
+//If so, return win condition.
 function checkWinner (){
     let hiddenBirds = 0
     for (i = 0; i <= clickBirds.length - 1; i++){
@@ -112,22 +110,3 @@ function checkWinner (){
 
 // onclick for "play again" button, returning to game to init state.
 gameOver.addEventListener('click', init); 
-
-
-
-//PLAY button needs to start the game.
-
-//player presses play, timer starts and birds start appearing.
-
-
-// I need the birds(buttons) that appear and disappear off the scree
-//incrementally. 
-
-// need an if / else. IF the player clicks bird get point.
-//ELSE if they miss lose point. 
-
-//IF a player gets 10 points before timer runs out..WIN
-//ELSE no 10 points before timer runs out...LOSE
-
-
-//function that knows IF all the divs inside #clickable are clikced then you win 
