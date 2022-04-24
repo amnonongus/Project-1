@@ -7,7 +7,7 @@
 
 **Technologies Used**: Includes HTML, CSS, and Javascript.
 
-**Getting Started**: https://amnonongus.github.io/Project-1/ Click the play button. You have 5 seconds to whaqk all of the ducks on the screen.
+**Getting Started**: https://amnonongus.github.io/Whaqk-a-duck/ Click the play button. You have 5 seconds to whaqk all of the ducks on the screen.
 
 **Next Steps**: Future versions of the game will include animated birds that move dynamically, with randomly generated spawn points. Ducks will stay on the screen for a small increment of time before disappearing and a score will be tallied, with leaderboards tracking best performers. 
 
